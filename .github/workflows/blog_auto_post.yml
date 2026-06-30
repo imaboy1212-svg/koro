@@ -1,9 +1,6 @@
 name: Blog Auto Post
 
 on:
-  schedule:
-    - cron: '0 0 * * *'    # 오전 9시 KST (UTC 00:00)
-    - cron: '0 9 * * *'    # 오후 6시 KST (UTC 09:00)
   workflow_dispatch:
 
 jobs:
