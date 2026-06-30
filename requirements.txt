@@ -1,0 +1,12 @@
+httpx
+pandas
+numpy
+requests
+urllib3
+pykrx
+finance-datareader
+google-genai
+beautifulsoup4
+google-api-python-client
+google-auth
+google-auth-oauthlib
