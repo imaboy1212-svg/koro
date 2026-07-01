@@ -277,8 +277,8 @@ def run_realtime_blog_automation():
 
 [라벨 규칙]
 아래 3개 중 이번 글의 핵심 이슈에 가장 적합한 라벨 1개만 선택하세요.
-- 시장 이슈: 금리, 환율, 지수, 거시경제, 정책 등 시장 전반에 영향을 주는 이슈
-- 실시간 속보: 돌발 이벤트, 긴급 공시, 속보성 단일 사건
+- Market Issue: 금리, 환율, 지수, 거시경제, 정책 등 시장 전반에 영향을 주는 이슈
+- Breaking News: 돌발 이벤트, 긴급 공시, 속보성 단일 사건
 - Column: 특정 기업·종목 중심의 분석성 내용
 반드시 아래 형식으로 응답 맨 끝에 추가하세요.
 [LABEL]라벨명[/LABEL]
@@ -354,8 +354,8 @@ def run_realtime_blog_automation():
     title = title_match.group(1).strip() if title_match else "오늘의 증권 실시간 이슈 분석"
     label_raw = label_match.group(1).strip() if label_match else "시장 이슈"
 
-    valid_labels = ['시장 이슈', '실시간 속보', 'Column']
-    label = label_raw if label_raw in valid_labels else '시장 이슈'
+    valid_labels = ['Market Issue', 'Breaking News', 'Column']
+    label = label_raw if label_raw in valid_labels else 'Market Issue'
 
     body = re.sub(r'\[TITLE\].*?\[/TITLE\]\n?', '', blog_content)
     body = re.sub(r'\[LABEL\].*?\[/LABEL\]\n?', '', body).strip()
